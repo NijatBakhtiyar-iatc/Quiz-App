@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.questions{
+  background: #0e6464;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px
+}
+h1{
+  color: white;
+  text-align: center;
+  padding: 10px 0 30px;
+}
+
+.context{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btns button{
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.next, .reset{
+  background: aliceblue;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: end;
+  margin: 10px auto;
+  cursor: pointer;
+}
+:is(.falseBtn, .trueBtn):disabled{
+  color:black;
+  background: #efefef;
+}
+.trueBtn.clicked{
+  color: #efefef;
+  background: green;
+}
+.falseBtn.clicked{
+  color: #efefef;
+  background: red;
+}
+
+.count{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+
+span#countTrue {
+  color: green;
+  font-weight: bold;
+}
+
+span#countFalse {
+  color: red;
+  font-weight: bold;
+}
+
+.reset{
+  display: none;
+}
+
+.count, .btns{
+  display: none;
+}
+
+.show .count, .show .btns{
+  display: flex;
+}
